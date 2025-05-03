@@ -1,0 +1,15 @@
+system: |-
+  Given the following 2 character specifications write a story trope that is suitable for the interaction of these characters.
+  Rules:
+  * trope must be detailed description in minimum 3 sentences.
+  * trope must focus on character behavioral, emotional interaction and less about the surrounding settings (environment) of the characters
+  * trope should describe a single small scene, keep the scope small
+  * trope should mention the characters by their 'name'
+  * mention the character's gender, age, personality, living condition that are only relevant to the trope
+
+  Return in the following json format
+  {{"trope": str}}
+user: |-
+  {% for character in characters -%}
+  * specification: {{ character }}
+  {% endfor %}
